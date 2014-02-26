@@ -15,90 +15,114 @@
       Index
     </a>
     &raquo;
-    <span class='title'>layouts</span>
+    <span class='title'>lib</span>
     &raquo;
-    <span class='title'>3-column.coffee</span>
+    <span class='title'>fs.coffee</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         File:
-        3-column.coffee
+        fs.coffee
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
-          <td>layouts</td>
+          <td>lib</td>
         </tr>
       </table>
+      <h2>Variables Summary</h2>
+      <dl class='constants'>
+  <dt id='ExtensionUtils-variable'>
+    ExtensionUtils
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>imports</code></pre>
+    
+  </dd>
+  <dt id='spawnSync-variable'>
+    spawnSync
+    =
+  </dt>
+  <dd>
+    <pre><code class='coffeescript'>Extension</code></pre>
+    
+  </dd>
+</dl>
       <h2>Method Summary</h2>
       <ul class='summary'>
   <li>
     <span class='signature'>
-      <a href='#layout-'>
+      <a href='#readFileSync-'>
         ~
 (void)
-<b>layout</b><span>(num)</span>
+<b>readFileSync</b><span>(filename)</span>
       </a>
     </span>
     <span class='desc'>
-      3-Column Layout <hr><p>|       |
-|   1   |</p><h2 id="-">|       |</h2>
-<hr><p>|   |   |
-| 1 | 2 |</p><h2 id="-">|   |   |</h2>
-<hr><p>|   |   |   |
-| 1 | 2 | 3 |</p><h2 id="-">|   |   |   |</h2>
-<hr><p>|   |   | 3 |
-| 1 | 2 |---|</p><h2 id="-4-">|   |   | 4 |</h2>
-<hr><p>|   | 2 | 3 |
-| 1 |---|---|</p><h2 id="-5-4-">|   | 5 | 4 |</h2>
-<hr><p>|   | 2 | 3 |
-|   |   | - |
-| 1 | - | 4 |
-|   | 5 | - |</p><h2 id="-6-">|   |   | 6 |</h2>
-<hr><p>|   | 2 | 3 |
-|   | - | - |
-| 1 | 5 | 4 |
-|   | - | - |</p><h2 id="-7-6-">|   | 7 | 6 |</h2>
-
+      Read File Contents 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#existsSync-'>
+        ~
+(void)
+<b>existsSync</b><span>(path)</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Test whether file exists 
     </span>
   </li>
 </ul>
       <h2>Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='layout-'>
+    <p class='signature' id='readFileSync-'>
       ~
 (void)
-<b>layout</b><span>(num)</span>
+<b>readFileSync</b><span>(filename)</span>
       <br>
     </p>
     <div class='docstring'>
-  <p>3-Column Layout</p><hr><p>|       |
-|   1   |</p><h2 id="-">|       |</h2>
-<hr><p>|   |   |
-| 1 | 2 |</p><h2 id="-">|   |   |</h2>
-<hr><p>|   |   |   |
-| 1 | 2 | 3 |</p><h2 id="-">|   |   |   |</h2>
-<hr><p>|   |   | 3 |
-| 1 | 2 |---|</p><h2 id="-4-">|   |   | 4 |</h2>
-<hr><p>|   | 2 | 3 |
-| 1 |---|---|</p><h2 id="-5-4-">|   | 5 | 4 |</h2>
-<hr><p>|   | 2 | 3 |
-|   |   | - |
-| 1 | - | 4 |
-|   | 5 | - |</p><h2 id="-6-">|   |   | 6 |</h2>
-<hr><p>|   | 2 | 3 |
-|   | - | - |
-| 1 | 5 | 4 |
-|   | - | - |</p><h2 id="-7-6-">|   | 7 | 6 |</h2>
-
+  <p>Read File Contents</p>
 </div>
 <div class='tags'>
-  <h3>Author:</h3>
-  <ul class='author'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
     <li>
-      Zeno Zeng 
+      <span class='name'>filename</span>
+      <span class='type'>
+        (<tt>String</tt>)
+      </span>
+      &mdash;
+      <span class='desc'>Absolute path of the file </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='existsSync-'>
+      ~
+(void)
+<b>existsSync</b><span>(path)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Test whether file exists</p>
+</div>
+<div class='tags'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
+    <li>
+      <span class='name'>path</span>
+      <span class='type'>
+        (<tt>String</tt>)
+      </span>
+      &mdash;
+      <span class='desc'>Absolute path of the file </span>
     </li>
   </ul>
 </div>

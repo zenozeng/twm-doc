@@ -15,13 +15,13 @@
       Index
     </a>
     &raquo;
-    <span class='title'>extension.coffee</span>
+    <span class='title'>helper.coffee</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         File:
-        extension.coffee
+        helper.coffee
       </h1>
       <table class='box'>
         <tr>
@@ -31,48 +31,32 @@
       </table>
       <h2>Variables Summary</h2>
       <dl class='constants'>
-  <dt id='ExtensionUtils-variable'>
-    ExtensionUtils
+  <dt id='Main-variable'>
+    Main
     =
   </dt>
   <dd>
     <pre><code class='coffeescript'>imports</code></pre>
     
   </dd>
-  <dt id='helper-variable'>
-    helper
+  <dt id='MessageTray-variable'>
+    MessageTray
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>Extension</code></pre>
+    <pre><code class='coffeescript'>imports</code></pre>
     
   </dd>
-  <dt id='keybindings-variable'>
-    keybindings
+  <dt id='GLib-variable'>
+    GLib
     =
   </dt>
   <dd>
-    <pre><code class='coffeescript'>Extension</code></pre>
+    <pre><code class='coffeescript'>imports</code></pre>
     
   </dd>
-  <dt id='ConfigManager-variable'>
-    ConfigManager
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>Extension</code></pre>
-    
-  </dd>
-  <dt id='WindowManager-variable'>
-    WindowManager
-    =
-  </dt>
-  <dd>
-    <pre><code class='coffeescript'>Extension</code></pre>
-    
-  </dd>
-  <dt id='Wnck-variable'>
-    Wnck
+  <dt id='ExtensionUtils-variable'>
+    ExtensionUtils
     =
   </dt>
   <dd>
@@ -84,10 +68,10 @@
       <ul class='summary'>
   <li>
     <span class='signature'>
-      <a href='#init-'>
+      <a href='#log-'>
         ~
 (void)
-<b>init</b><span>()</span>
+<b>log</b><span>(text)</span>
       </a>
     </span>
     <span class='desc'>
@@ -95,10 +79,10 @@
   </li>
   <li>
     <span class='signature'>
-      <a href='#enable-'>
+      <a href='#spawn-'>
         ~
 (void)
-<b>enable</b><span>()</span>
+<b>spawn</b><span>(cmd)</span>
       </a>
     </span>
     <span class='desc'>
@@ -106,10 +90,43 @@
   </li>
   <li>
     <span class='signature'>
-      <a href='#disable-'>
+      <a href='#spawnSync-'>
         ~
 (void)
-<b>disable</b><span>()</span>
+<b>spawnSync</b><span>(cmd)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#delay-'>
+        ~
+(void)
+<b>delay</b><span>(time, callback)</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getXServerTimestamp-'>
+        ~
+(void)
+<b>getXServerTimestamp</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#runGjsScript-'>
+        ~
+(void)
+<b>runGjsScript</b><span>(scriptName, args, callback)</span>
       </a>
     </span>
     <span class='desc'>
@@ -119,28 +136,55 @@
       <h2>Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='init-'>
+    <p class='signature' id='log-'>
       ~
 (void)
-<b>init</b><span>()</span>
+<b>log</b><span>(text)</span>
       <br>
     </p>
     
   </div>
   <div class='method_details'>
-    <p class='signature' id='enable-'>
+    <p class='signature' id='spawn-'>
       ~
 (void)
-<b>enable</b><span>()</span>
+<b>spawn</b><span>(cmd)</span>
       <br>
     </p>
     
   </div>
   <div class='method_details'>
-    <p class='signature' id='disable-'>
+    <p class='signature' id='spawnSync-'>
       ~
 (void)
-<b>disable</b><span>()</span>
+<b>spawnSync</b><span>(cmd)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='delay-'>
+      ~
+(void)
+<b>delay</b><span>(time, callback)</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='getXServerTimestamp-'>
+      ~
+(void)
+<b>getXServerTimestamp</b><span>()</span>
+      <br>
+    </p>
+    
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='runGjsScript-'>
+      ~
+(void)
+<b>runGjsScript</b><span>(scriptName, args, callback)</span>
       <br>
     </p>
     

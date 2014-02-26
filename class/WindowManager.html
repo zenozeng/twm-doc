@@ -15,128 +15,134 @@
       Index
     </a>
     &raquo;
-    <span class='title'>Window</span>
+    <span class='title'>WindowManager</span>
   </div>
 </div>
     <div id='content'>
       <h1>
         Class:
-        Window
+        WindowManager
       </h1>
       <table class='box'>
         <tr>
           <td>Defined in:</td>
-          <td>wm&#47;window.coffee</td>
+          <td>wm&#47;windowManager.coffee</td>
         </tr>
       </table>
+      <h2>Overview</h2>
+      <div class='docstring'>
+  <p>Window Manager</p>
+</div>
+<div class='tags'>
+</div>
       <h2>Instance Method Summary</h2>
       <ul class='summary'>
   <li>
     <span class='signature'>
-      <a href='#getId-dynamic'>
+      <a href='#getVisibleWindows-dynamic'>
         #
 (void)
-<b>getId</b><span>()</span>
+<b>getVisibleWindows</b><span>()</span>
       </a>
     </span>
     <span class='desc'>
-      Get ID (current xid used) 
+      Get all visible windows in current workspace (in all monitors) 
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#getGeometry-dynamic'>
+      <a href='#setGeometryInterval-dynamic'>
         #
 (void)
-<b>getGeometry</b><span>()</span>
+<b>setGeometryInterval</b><span>()</span>
       </a>
     </span>
-    <span class='desc'>
-      Return client geometry 
-    </span>
-  </li>
-  <li>
-    <span class='signature'>
-      <a href='#getTargetGeometry-dynamic'>
-        #
-(void)
-<b>getTargetGeometry</b><span>()</span>
-      </a>
-    </span>
+    <span class='note private title'>Private</span>
     <span class='desc'>
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#setTargetGeometry-dynamic'>
+      <a href='#ignore-dynamic'>
         #
 (void)
-<b>setTargetGeometry</b><span>(geometry)</span>
+<b>ignore</b><span>(window)</span>
       </a>
     </span>
     <span class='desc'>
-      Set target geometry 
+      Return true if the (Window) window should be ignored 
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#setFloat-dynamic'>
+      <a href='#forceUpdate-dynamic'>
         #
 (void)
-<b>setFloat</b><span>()</span>
+<b>forceUpdate</b><span>()</span>
       </a>
     </span>
     <span class='desc'>
-      Set window as float 
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#isNormalWindow-dynamic'>
+      <a href='#connect-dynamic'>
         #
 (void)
-<b>isNormalWindow</b><span>()</span>
+<b>connect</b><span>(event, callback)</span>
       </a>
     </span>
     <span class='desc'>
-      Return true if type of @wnckWindow is WNCK_WINDOW_NORMAL 
+      Bind event 
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#removeDecorations-dynamic'>
+      <a href='#emit-dynamic'>
         #
 (void)
-<b>removeDecorations</b><span>()</span>
+<b>emit</b><span>(event, args)</span>
       </a>
     </span>
+    <span class='note private title'>Private</span>
     <span class='desc'>
-      Remove title bar 
+      Emit event 
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#setGeometryHints-dynamic'>
+      <a href='#getActiveWindow-dynamic'>
         #
 (void)
-<b>setGeometryHints</b><span>()</span>
+<b>getActiveWindow</b><span>()</span>
       </a>
     </span>
     <span class='desc'>
-      <p>Set geometry hints Overide WM_NORMAL_HINTS(WM_SIZE_HINTS)
-allow setting width &amp; height using px (for Gnome Termianl, Emacs)</p>
+      Get active window (Wnck Window) 
     </span>
   </li>
   <li>
     <span class='signature'>
-      <a href='#setGeometry-dynamic'>
+      <a href='#getActiveWorkspace-dynamic'>
         #
 (void)
-<b>setGeometry</b><span>(geometry)</span>
+<b>getActiveWorkspace</b><span>()</span>
       </a>
     </span>
     <span class='desc'>
-      geometry = {x: int, y: int, width: int, height: int} 
+      Get active workspace (Wnck Workspace) 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
+      <a href='#getWindows-dynamic'>
+        #
+(void)
+<b>getWindows</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Get an array of all windows of current screen (Wnck Window) 
     </span>
   </li>
 </ul>
@@ -146,7 +152,7 @@ allow setting width &amp; height using px (for Gnome Termianl, Emacs)</p>
     <p class='signature' id='constructor-dynamic'>
       #
 (void)
-<b>constructor</b><span>(wnckWindow)</span>
+<b>constructor</b><span>()</span>
       <br>
     </p>
     
@@ -155,145 +161,178 @@ allow setting width &amp; height using px (for Gnome Termianl, Emacs)</p>
       <h2>Instance Method Details</h2>
       <div class='methods'>
   <div class='method_details'>
-    <p class='signature' id='getId-dynamic'>
+    <p class='signature' id='getVisibleWindows-dynamic'>
       #
 (void)
-<b>getId</b><span>()</span>
+<b>getVisibleWindows</b><span>()</span>
       <br>
     </p>
     <div class='docstring'>
-  <p>Get ID (current xid used)</p>
+  <p>Get all visible windows in current workspace (in all monitors)</p>
 </div>
 <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='getGeometry-dynamic'>
+    <p class='signature' id='setGeometryInterval-dynamic'>
       #
 (void)
-<b>getGeometry</b><span>()</span>
+<b>setGeometryInterval</b><span>()</span>
+      <span class='note private'>Private</span>
       <br>
     </p>
     <div class='docstring'>
-  <p>Return client geometry</p>
+  <div class='note'>
+    <strong>Note:</strong>
+    Some window (like Emacs) might set wm_normal_hints and size after some seconds, so this function should be called by interval. 
+  </div>
+  
 </div>
 <div class='tags'>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='getTargetGeometry-dynamic'>
+    <p class='signature' id='ignore-dynamic'>
       #
 (void)
-<b>getTargetGeometry</b><span>()</span>
+<b>ignore</b><span>(window)</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Return true if the (Window) window should be ignored</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
+  <div class='method_details'>
+    <p class='signature' id='forceUpdate-dynamic'>
+      #
+(void)
+<b>forceUpdate</b><span>()</span>
       <br>
     </p>
     
   </div>
   <div class='method_details'>
-    <p class='signature' id='setTargetGeometry-dynamic'>
+    <p class='signature' id='connect-dynamic'>
       #
 (void)
-<b>setTargetGeometry</b><span>(geometry)</span>
+<b>connect</b><span>(event, callback)</span>
       <br>
     </p>
     <div class='docstring'>
-  <p>Set target geometry</p>
-  <div class='examples'>
-    <h3>Examples:</h3>
-    <h4>
-      
-    </h4>
-    <pre><code class='coffeescript'>window.setTargetGeometry({x: x, y: y, width: width, height: height});</code></pre>
-  </div>
+  <p>Bind event</p>
 </div>
 <div class='tags'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
+    <li>
+      <span class='name'>event</span>
+      <span class='type'>
+        (<tt>String</tt>)
+      </span>
+      &mdash;
+      <span class='desc'>Event name </span>
+    </li>
+    <li>
+      <span class='name'>callback</span>
+      <span class='type'>
+        (<tt>Function</tt>)
+      </span>
+      &mdash;
+      <span class='desc'>callback </span>
+    </li>
+  </ul>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='setFloat-dynamic'>
+    <p class='signature' id='emit-dynamic'>
       #
 (void)
-<b>setFloat</b><span>()</span>
+<b>emit</b><span>(event, args)</span>
+      <span class='note private'>Private</span>
       <br>
     </p>
     <div class='docstring'>
-  <div class='note'>
-    <strong>Note:</strong>
-    all storage related to this window will be cleared 
-  </div>
-  <p>Set window as float</p>
+  <p>Emit event</p>
 </div>
 <div class='tags'>
+  <h3>Parameters:</h3>
+  <ul class='param'>
+    <li>
+      <span class='name'>event</span>
+      <span class='type'>
+        (<tt>String</tt>)
+      </span>
+      &mdash;
+      <span class='desc'>Event name </span>
+    </li>
+    <li>
+      <span class='name'>args</span>
+      <span class='type'>
+        (<tt>Array</tt>)
+      </span>
+      &mdash;
+      <span class='desc'>Args for callback </span>
+    </li>
+  </ul>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='isNormalWindow-dynamic'>
+    <p class='signature' id='getActiveWindow-dynamic'>
       #
 (void)
-<b>isNormalWindow</b><span>()</span>
+<b>getActiveWindow</b><span>()</span>
       <br>
     </p>
     <div class='docstring'>
-  <p>Return true if type of @wnckWindow is WNCK_WINDOW_NORMAL</p>
+  <p>Get active window (Wnck Window)</p>
 </div>
 <div class='tags'>
+  <h3>See also:</h3>
+  <ul class='see'>
+    <li>
+      <a href='https://developer.gnome.org/libwnck/stable/WnckWindow.html'>https:&#47;&#47;developer.gnome.org&#47;libwnck&#47;stable&#47;WnckWindow.html</a>
+    </li>
+  </ul>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='removeDecorations-dynamic'>
+    <p class='signature' id='getActiveWorkspace-dynamic'>
       #
 (void)
-<b>removeDecorations</b><span>()</span>
+<b>getActiveWorkspace</b><span>()</span>
       <br>
     </p>
     <div class='docstring'>
-  <div class='note'>
-    <strong>Note:</strong>
-    Gnome Shell might freeze if this functions is called too frequently ( interval &lt;= 100ms in my labtop) 
-  </div>
-  <div class='note'>
-    <strong>Note:</strong>
-    The window should be unmaximized before, which is done by setGeometry 
-  </div>
-  <div class='note'>
-    <strong>Note:</strong>
-    This gjs must be run outside (via runGjsScript), otherwise the window might crash 
-  </div>
-  <p>Remove title bar</p>
+  <p>Get active workspace (Wnck Workspace)</p>
 </div>
 <div class='tags'>
+  <h3>See also:</h3>
+  <ul class='see'>
+    <li>
+      <a href='https://developer.gnome.org/libwnck/stable/WnckWorkspace.html'>https:&#47;&#47;developer.gnome.org&#47;libwnck&#47;stable&#47;WnckWorkspace.html</a>
+    </li>
+  </ul>
 </div>
   </div>
   <div class='method_details'>
-    <p class='signature' id='setGeometryHints-dynamic'>
+    <p class='signature' id='getWindows-dynamic'>
       #
 (void)
-<b>setGeometryHints</b><span>()</span>
+<b>getWindows</b><span>()</span>
       <br>
     </p>
     <div class='docstring'>
-  <div class='note'>
-    <strong>Note:</strong>
-    the gjs must be run outside, or the window might crash 
-  </div>
-  <p>Set geometry hints
-Overide WM_NORMAL_HINTS(WM_SIZE_HINTS)
-allow setting width &amp; height using px (for Gnome Termianl, Emacs)</p>
+  <p>Get an array of all windows of current screen (Wnck Window)</p>
 </div>
 <div class='tags'>
-</div>
-  </div>
-  <div class='method_details'>
-    <p class='signature' id='setGeometry-dynamic'>
-      #
-(void)
-<b>setGeometry</b><span>(geometry)</span>
-      <br>
-    </p>
-    <div class='docstring'>
-  <p>geometry = {x: int, y: int, width: int, height: int}</p>
-</div>
-<div class='tags'>
+  <h3>See also:</h3>
+  <ul class='see'>
+    <li>
+      <a href='https://developer.gnome.org/libwnck/stable/WnckWindow.html'>https:&#47;&#47;developer.gnome.org&#47;libwnck&#47;stable&#47;WnckWindow.html</a>
+    </li>
+  </ul>
 </div>
   </div>
 </div>
